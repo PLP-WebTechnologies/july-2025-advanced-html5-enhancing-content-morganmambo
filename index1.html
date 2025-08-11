@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enhanced HTML5 Form Example with Lists, Tables, and Media">
+    <title>Enhanced HTML5 Form</title>
+</head>
+<body>
+    <header>
+        <h1>Registration Portal</h1>
+        <p>Fill out the form below to register for our upcoming tech workshop.</p>
+    </header>
+
+    <main>
+        <!-- Informational Section with List -->
+        <section>
+            <h2>Workshop Topics</h2>
+            <ul>
+                <li>HTML5 & Semantic Web</li>
+                <li>CSS3 & Responsive Design</li>
+                <li>Accessibility Best Practices</li>
+                <li>Modern Web Forms</li>
+            </ul>
+        </section>
+
+        <!-- Informational Table -->
+        <section>
+            <h2>Event Schedule</h2>
+            <table border="1" cellpadding="5" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Activity</th>
+                        <th>Speaker</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:00 - 09:30</td>
+                        <td>Registration</td>
+                        <td>Event Team</td>
+                    </tr>
+                    <tr>
+                        <td>09:30 - 11:00</td>
+                        <td>HTML5 Deep Dive</td>
+                        <td>Jane Doe</td>
+                    </tr>
+                    <tr>
+                        <td>11:15 - 12:30</td>
+                        <td>CSS Mastery</td>
+                        <td>John Smith</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Media -->
+        <section>
+            <h2>Workshop Preview</h2>
+            <figure>
+                <img src="https://via.placeholder.com/600x300" alt="Workshop Preview Image" width="600">
+                <figcaption>Join us for an exciting and interactive learning experience.</figcaption>
+            </figure>
+        </section>
+
+        <!-- HTML5 Form -->
+        <article>
+            <h2>Registration Form</h2>
+            <form action="/submit" method="post">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required autocomplete="name"><br><br>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email"><br><br>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+254700000000" required pattern="^\+?\d{10,15}$" autocomplete="tel"><br><br>
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Workshop Preferences</legend>
+                    <label for="topic">Preferred Topic:</label>
+                    <select id="topic" name="topic" required>
+                        <option value="">-- Select a topic --</option>
+                        <option value="html">HTML5 & Semantic Web</option>
+                        <option value="css">CSS3 & Responsive Design</option>
+                        <option value="accessibility">Accessibility Best Practices</option>
+                        <option value="forms">Modern Web Forms</option>
+                    </select><br><br>
+
+                    <label>Attendance Mode:</label>
+                    <input type="radio" id="inperson" name="mode" value="In-Person" required>
+                    <label for="inperson">In-Person</label>
+                    <input type="radio" id="online" name="mode" value="Online">
+                    <label for="online">Online</label><br><br>
+
+                    <label for="tshirt">T-shirt Size:</label>
+                    <input list="sizes" id="tshirt" name="tshirt" placeholder="Choose size" required>
+                    <datalist id="sizes">
+                        <option value="Small">
+                        <option value="Medium">
+                        <option value="Large">
+                        <option value="Extra Large">
+                    </datalist><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Other Information</legend>
+                    <label for="idnumber">ID Number:</label>
+                    <input type="text" id="idnumber" name="idnumber" value="Generated by System" readonly><br><br>
+
+                    <label for="comments">Additional Comments:</label><br>
+                    <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Write your comments here..."></textarea><br><br>
+
+                    <label for="agree">
+                        <input type="checkbox" id="agree" name="agree" required>
+                        I agree to the terms and conditions
+                    </label>
+                </fieldset>
+
+                <br>
+                <button type="submit">Submit Registration</button>
+                <button type="reset">Clear Form</button>
+            </form>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tech Workshop. All rights reserved.</p>
+    </footer>
+</body>
+</html>
